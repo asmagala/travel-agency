@@ -9,7 +9,7 @@ import {Grid, Row, Col} from 'react-flexbox-grid';
 import TripListOptions from '../../features/TripListOptions/TripListOptionsContainer';
 
 const Trips = ({trips}) => (
-  <Section>
+  <Section >
     <Grid>
       <Row>
         <Col xs={12}>
