@@ -14,6 +14,8 @@ import ListItem from '../../common/ListItem/ListItem';
 import styles from './Trip.scss';
 import {Grid, Row, Col} from 'react-flexbox-grid';
 
+import OrderForm from '../../features/OrderForm/OrderFormContainer';
+
 const Trip = ({error, name, image, cost, days, description, country, intro}) => {
   if(error) return <NotFound />;
   else return (
@@ -66,6 +68,14 @@ const Trip = ({error, name, image, cost, days, description, country, intro}) => 
           </Row>
         </Grid>
       </DetailsBox>
+      <Grid>
+        <Row>
+          <Col xs={12}>
+            <PageTitle text='Trip options' />
+            <OrderForm tripCost={cost}/> 
+          </Col>
+        </Row>
+      </Grid>
     </Section>
   );
 };
