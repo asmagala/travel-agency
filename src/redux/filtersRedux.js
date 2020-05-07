@@ -27,15 +27,17 @@ export const changeDuration = payload => ({ payload, type: CHANGE_DURATION });
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case CHANGE_PHRASE:
+      console.log('CHANGE_PHRASE: action.payload', action.payload);
       return {
         ...statePart,
         searchPhrase: action.payload,
       };
     // TODO - handle other action types
     case ADD_TAG:
+      console.log('ADD_TAG: payload', action.payload);
       return {
         ...statePart,
-        tags: [...statePart.tags, action.paylad],
+        tags: [...statePart.tags, action.payload],
       };
     case REMOVE_TAG:
       return {
