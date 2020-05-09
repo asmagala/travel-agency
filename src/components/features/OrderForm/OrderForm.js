@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {Row, Col} from 'react-flexbox-grid';
 import OrderSummary from '../OrderSummary/OrderSummary';
 
-const OrderForm = ({ tripCost, ...options }) => {
+const OrderForm = ({ tripCost, options }) => {
   return (
     <Row>
       <Col xs={12}>
-        <OrderSummary tripCost={tripCost} {...options}/>
+        <OrderSummary tripCost={tripCost} options={options.order.options}/>
       </Col>
     </Row>
   );
