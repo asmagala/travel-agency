@@ -23,8 +23,7 @@ const OrderOption = ({name, type, ...otherProps}) => {
   } else {
     return (
       <div className={styles.component}>
-        <h3 className={styles.title}>{otherProps.name}</h3>
-        {console.log('otherProps:', otherProps)}
+        <h3 className={styles.title}>{name}</h3>
         <OptionComponent name={name} type={type} {...otherProps} />
       </div>
     );
