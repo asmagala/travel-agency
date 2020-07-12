@@ -1,1 +1,59 @@
 @import '../../../styles/settings.scss';
+
+$smaller-multiply: 1.4;
+$bigger-multiply: 2.2;
+
+.box {
+    margin: $base-size;
+    padding: $base-size;
+    background-color: #e0e4e9;
+    border-radius: $radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    label { 
+      margin: $base-size;
+      
+    }
+  
+    select {
+      display: block;
+      margin: 0 auto;
+      font-family: inherit;
+      font-size: $base-size * $smaller-multiply;
+      
+    }
+
+    input[type='icon'] {
+      width: $base-size * $bigger-multiply;
+      height: $base-size * $bigger-multiply;
+      margin: 0 $base-size;
+      
+    }
+
+    input[type='checkbox'] {
+      width: $base-size * $bigger-multiply;
+      height: $base-size * $bigger-multiply;
+      margin: 0 $base-size;
+      vertical-align: bottom;
+    }
+  
+    input[type='number'] {
+      width: $base-size * 6;
+      text-align: center;
+      margin: 0 $base-size;
+      padding: $base-size/2 0;
+      font-family: inherit;
+      font-size: $base-size * $smaller-multiply;
+    }
+
+    input[type='text'] {
+      padding: $base-size/3;
+      text-align: center;
+      margin: 0 $base-size;
+      padding: $base-size/2;
+      font-family: inherit;
+      font-size: $base-size * $smaller-multiply;
+    }
+  }
