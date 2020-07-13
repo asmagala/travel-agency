@@ -47,6 +47,10 @@
       "error",
       "always-multiline"
     ],
+    "no-unused-vars": [
+      "error",
+      { "ignoreRestSiblings": true }
+    ],
     "no-console": "off"
   }
 }
