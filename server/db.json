@@ -1,0 +1,33 @@
+{
+  "orders": [
+    {
+      "car-rental": "suv",
+      "accommodation": "suite",
+      "features": [
+        "all-inclusive",
+        "kitchen"
+      ],
+      "adults": "1",
+      "children": 0,
+      "name": "aaaa",
+      "contact": "bbbb",
+      "start-date": "2020-07-16T21:14:58.000Z",
+      "totalCost": "$30,719",
+      "id": 1
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "suite",
+      "features": [
+        "all-inclusive"
+      ],
+      "adults": "3",
+      "children": "1",
+      "name": "",
+      "contact": "",
+      "start-date": "2020-07-14T21:21:41.228Z",
+      "totalCost": "$36,236",
+      "id": 2
+    }
+  ]
+}
