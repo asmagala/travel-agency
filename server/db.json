@@ -28,6 +28,59 @@
       "start-date": "2020-07-14T21:21:41.228Z",
       "totalCost": "$36,236",
       "id": 2
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "",
+      "contact": "",
+      "start-date": "2020-07-15T18:09:40.608Z",
+      "totalCost": "$28,513",
+      "id": 3
+    },
+    {
+      "car-rental": "luxury",
+      "accommodation": "house",
+      "features": [
+        "security"
+      ],
+      "adults": 1,
+      "children": 0,
+      "name": "Faal van Con",
+      "contact": "544 344 666",
+      "start-date": "2020-07-16T18:32:06.000Z",
+      "totalCost": "$32,556",
+      "id": 4
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "sss",
+      "contact": "aaa",
+      "start-date": "2020-07-15T18:57:40.761Z",
+      "totalCost": "$29,256",
+      "id": 5
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "a",
+      "contact": "s",
+      "start-date": "2020-07-15T19:09:46.506Z",
+      "totalCost": "$29,256",
+      "tripName": "Remarkable swing in fine Zimbabwe",
+      "tripId": "5cc1d101f5472008227158cf",
+      "tripCountryCode": "ZWE",
+      "id": 6
     }
   ]
 }

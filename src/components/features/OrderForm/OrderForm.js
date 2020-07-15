@@ -11,37 +11,45 @@ import styles from './OrderForm.scss';
 import { formatPrice } from '../../../utils/formatPrice';
 import { calculateTotal } from '../../../utils/calculateTotal';
 import settings from '../../../data/settings';
-//import PricingOptions from '../../../data/pricing';
+
 import Button from '../../common/Button/Button';
 
-const sendOrder = (options, tripCost) => {
+const sendOrder = (options, tripCost, tripName, tripId, tripCountryCode) => {
   const totalCost = formatPrice(calculateTotal(tripCost, options));
 
-  const payload = {
-    ...options,
-    totalCost,
-  };
+  if ((options.name !== '') && (options.contact !== '')) {
+    const payload = {
+      ...options,
+      totalCost,
+      tripName,
+      tripId,
+      tripCountryCode,
+    };
+  
+    const url = settings.db.url + '/' + settings.db.endpoint.orders;
 
-  const url = settings.db.url + '/' + settings.db.endpoint.orders;
+    const fetchOptions = {
+      cache: 'no-cache',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    };
 
-  const fetchOptions = {
-    cache: 'no-cache',
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-  };
-
-  fetch(url, fetchOptions)
-    .then(function(response) {
-      return response.json();
-    }).then(function(parsedResponse) {
-      console.log('parsedResponse', parsedResponse);
-    });
+    fetch(url, fetchOptions)
+      .then(function(response) {
+        return response.json();
+      }).then(function(parsedResponse) {
+        console.log('parsedResponse', parsedResponse);
+      });
+  
+  } else {
+    window.alert('We need your name and contact to complete the order. Please fill in your data!');
+  }
 };
 
-const OrderForm = ({ tripCost, setOrderOption, options }) => {
+const OrderForm = ({ tripCost, setOrderOption, options, tripName, tripId, tripCountryCode }) => {
   return (
     <Row>
       {pricing.map(opt => (
@@ -53,7 +61,8 @@ const OrderForm = ({ tripCost, setOrderOption, options }) => {
         <OrderSummary tripCost={tripCost} options={options}/>
       </Col>
 
-      <Button onClick={ () => sendOrder(options, tripCost)}>Order now!</Button>
+      <Button onClick={ () => 
+        sendOrder(options, tripCost, tripName, tripId, tripCountryCode)}>Order now!</Button>
     </Row>
   );
 };
@@ -62,6 +71,9 @@ OrderForm.propTypes = {
   tripCost: PropTypes.string,
   options: PropTypes.object,
   setOrderOption: PropTypes.func,
+  tripId: PropTypes.string,
+  tripName: PropTypes.string,
+  tripCountryCode: PropTypes.string,
 };
 
 export default OrderForm;
