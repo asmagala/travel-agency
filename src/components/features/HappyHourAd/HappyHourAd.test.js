@@ -13,7 +13,10 @@ const mockProps = {
   promoDescription: 'mockProps promoDescription',
 };
 
-
+beforeAll(() => {
+  const utilsModule = jest.requireActual('../../../utils/formatTime.js');
+  utilsModule.formatTime = jest.fn(seconds => seconds);
+});
 
 describe('Component HappyHourAdd', () => {
   it('should render without crashing', () => {
