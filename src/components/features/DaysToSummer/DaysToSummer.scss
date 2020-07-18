@@ -1,11 +1,12 @@
 .component {
   position: relative;
   text-align: center;
-  color: #fff;
 }
 
 .summerInfo {
   position: absolute;
   width: 100%;
   top: 40px;
+  font-size: 20px;
+  color: red;
 }
