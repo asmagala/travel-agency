@@ -13,7 +13,7 @@ const Hero = ({variant = '', titleText, imageSrc, ...otherProps}) => (
         title={'Happy Hour'}
         promoDescription={'It\'s your time! Take advantage of Happy Hour! All offers 20% off!'} />
     </div>
-    <div><DaysToSummer /></div>
+    <DaysToSummer />
   </div>
 );
 
